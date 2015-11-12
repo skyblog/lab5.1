@@ -5,13 +5,12 @@ end
 
 When(/^I select the post$/) do
 	visit("/posts")
+	click_link("Show", :href=>"/posts/#{@post.id}")
    # express the regexp above with the code you wish you had
 end
 
-#When(/^I click "(.*?)"$/) do |btn|
-When(/^I click "Delete Post"$/) do
-  click_link("Destroy")
-   # express the regexp above with the code you wish you had
+When(/^I click "(.*?)"$/) do |btn|
+	click_on btn
 end
 
 

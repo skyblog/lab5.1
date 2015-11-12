@@ -5,15 +5,11 @@ end
 
 When(/^I edit this post$/) do
   click_link("Edit", :href=>"/posts/#{@post.id}/edit")
-  #click_link "#{@post.id}"
-  #page.should have_selector("h1#Edit Post")
-   # express the regexp above with the code you wish you had
 end
 
 When(/^I update title to "(.*?)" and content to "(.*?)"$/) do |title,content|
   @titlex,@contentx=title, content
   fill_in "Title", :with => title
-  #@contentx= contentx
   fill_in "Content", :with => content
   click_button("Update Post")
    # express the regexp above with the code you wish you had
